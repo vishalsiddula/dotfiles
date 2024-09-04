@@ -1,0 +1,29 @@
+[user]
+    name = Vishal Siddula
+    email = s.vishal54@gmail.com
+[alias]
+    a = "!git status --short | awk '{print $2}' | xargs git add"
+    d = diff
+    co = checkout
+    ci = commit
+    ca = commit -a
+    ps = "!git push origin $(git rev-parse --abbrev-ref HEAD)"
+    pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD)"
+    st = status
+    br = branch
+    ba = branch -a
+    bm = branch --merged
+    bn = branch --no-merged
+    hist = log --pretty=format:\"%Cgreen%h %Creset%cd %Cblue[%cn] %Creset%s%C(yellow)%d%C(reset)\" --graph --date=relative --decorate --all
+    llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
+    ls = log --oneline
+[core]
+    editor = vim
+[color]
+    status=always
+    branch=always
+    interactive=always
+    diff=always
+    ui=true
+[push]
+    autoSetupRemote = true
